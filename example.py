@@ -1,6 +1,15 @@
 #!/usr/bin/python
 # coding=utf-8
 
+import bpy
+import sys
+import os
+
+#dir = os.path.dirname(bpy.data.filepath)
+dir = "C:\\Users\\localadmin\\Downloads\\eyemodel-master\\eyemodel-master"
+if not dir in sys.path:
+    sys.path.append(dir)
+
 import eyemodel
 
 #   ^
@@ -43,3 +52,4 @@ with eyemodel.Renderer() as r:
 
     r.render_samples = 50
     r.render("example.png", "example.m")
+    #r.render("example.png", "C:\\Users\\localadmin\\Downloads\\eyemodel-master\\eyemodel-master")
