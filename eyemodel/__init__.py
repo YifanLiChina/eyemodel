@@ -144,7 +144,8 @@ class Renderer():
 
         self.camera_noise_seed = None
 
-    def render(self, path, params=None, background=True, cuda=True, attempts=5):
+    #def render(self, path, params=None, background=True, cuda=True, attempts=5):#
+    def render(self, path, params=None, background=True, cuda=False, attempts=1):
         __, ext = os.path.splitext(path)
         ext = ext.lower()
         if ext == ".png":
